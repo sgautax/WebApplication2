@@ -17,6 +17,14 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1
+    #Substitutes variables 
+    - name: App Settings Variable Substitution
+    - uses: microsoft/variable-substitution@v1 // name of Github action
+      with:
+        file: "./pages/Index.razor"
+      env:
+        Secret : ${{secrets.MYSECRET}}
+
 
     # publishes Blazor project to the release-folder
     - name: Publish .NET Core Project
