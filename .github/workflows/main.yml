@@ -21,7 +21,7 @@ jobs:
     - name: App Settings Variable Substitution
       uses: microsoft/variable-substitution@v1
       with:
-        file: "./pages/Index.razor"
+        files: "./pages/Index.razor"
       env:
         Secret : ${{secrets.MYSECRET}}
 
